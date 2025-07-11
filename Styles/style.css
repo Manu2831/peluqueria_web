@@ -136,11 +136,17 @@ h2{
 }
 .tarjeta-carro {
     max-width: 400px;
-    margin: 0 auto;
+    margin: 0px auto;
     background: #fff;
     border-radius: 10px;
     box-shadow: 0 2px 8px rgba(0,0,0,0.08);
     padding: 24px;
+}
+.tarjeta-carro p{
+    padding: 10px;
+}
+.tarjeta-carro ul {
+    padding: 12px;
 }
 footer{
     background-color: #000000;
