@@ -9,8 +9,7 @@ header {
     background-color: #000000;
     color: #ffffff;
     margin: 0px;
-    padding-top: 1px;
-    padding-bottom: 5px;
+    padding: 5px 0px;
     text-align: center;
 }
 #catalogo{
@@ -44,9 +43,112 @@ h2{
     text-align: center;
     padding-bottom: 30px;
 }
+.Producto img{
+    width: 100%;
+    height: auto;
+    border-radius: 10px;
+    margin-bottom: 10px;
+}
 .Producto:hover{
     background-color: #f0f0f0;
     transform: scale(1.05);
     transition: transform 0.2s ease-in-out;
     box-shadow: 0px 0px 20px rgba(0, 0, 0, 0.2);
+}
+#encuesta h2{
+    margin-top: 50px;
+    text-align: center;
+    margin-bottom: 18px; 
+    letter-spacing: 1px;
+}
+.tarjeta-encuesta {
+    max-width: 400px;
+    margin: 0 auto;
+    background: #fff;
+    border-radius: 10px;
+    box-shadow: 0 2px 8px rgba(0,0,0,0.08);
+    padding: 24px;
+}
+.tarjeta-encuesta textarea {
+    width: 100%;
+    border-radius: 6px;
+    border: 1px solid #ccc;
+    padding: 8px;
+    resize: vertical;
+}
+.botoncito {
+    display: flex;
+    justify-content: center;
+    margin-top: 12px;
+}
+.botoncito button {
+    background: #6241ad;
+    color: #fff;
+    border: none;
+    border-radius: 6px;
+    padding: 8px 24px;
+    cursor: pointer;
+    font-size: 1em;
+}
+#citas h2 {
+    text-align: center;
+    margin-bottom: 18px; 
+    letter-spacing: 1px;
+}
+.tarjeta-cita {
+    max-width: 400px;
+    margin: 0 auto;
+    background: #fff;
+    border-radius: 10px;
+    box-shadow: 0 2px 8px rgba(0,0,0,0.08);
+    padding: 24px;
+}
+#citas label{
+    display: flex;
+    flex-direction: column;
+    margin-top: 10px;
+}
+#citas  legend{
+    font-weight: bold;
+    font-size: 1.2em;
+}
+.tarjeta-cita input{
+    width: 90%;
+    border-radius: 6px;
+    border: 1px solid #ccc;
+    padding: 8px;
+    resize: vertical;
+}
+.tarjeta-cita button {
+    background: #6241ad;
+    color: #fff;
+    border: none;
+    border-radius: 6px;
+    padding: 8px 24px;
+    cursor: pointer;
+    font-size: 1em;
+    margin-top: 12px;
+}
+#Carrito h2 {
+    text-align: center;
+    margin-bottom: 18px; 
+    letter-spacing: 1px;
+}
+.tarjeta-carro {
+    max-width: 400px;
+    margin: 0 auto;
+    background: #fff;
+    border-radius: 10px;
+    box-shadow: 0 2px 8px rgba(0,0,0,0.08);
+    padding: 24px;
+}
+footer{
+    background-color: #000000;
+    color: #ffffff;
+    text-align: center;
+    padding: 1px 0px;
+    position: relative;
+    bottom: 0;
+    width: 100%;
+    margin-top: 25px;
 }

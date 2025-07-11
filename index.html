@@ -16,28 +16,44 @@
         <div class="Productos">
             <div class="Producto">
                 <h3>Shampoo Keratina</h3>
+                <img src="Img/Shampoo.jpg" alt="Shampoo">
                 <p>Precio: $25.000</p>
-                <button onclick="Agregaralcarrito('Shampoo Keratina',25000)">Agregar al Carrito</button>
+                <button onclick="AgregarAlCarrito('Shampoo Keratina',25000)">Agregar al Carrito</button>
             </div>
             <div class="Producto">
                 <h3>Aceite Reparador</h3>
+                <img src="Img/Aceite.jpg" alt="Aceite">
                 <p>Precio: $30.000</p>
-                <button onclick="Agregaralcarrito('Aceite Reparador',30000)">Agregar al Carrito</button>
+                <button onclick="AgregarAlCarrito('Aceite Reparador',30000)">Agregar al Carrito</button>
+            </div>
+            <div class="Producto">
+                <h3>Acondicionador</h3>
+                <img src="Img/Acondionador.jpg" alt="Acondicionador">
+                <p>Precio: $35.000</p>
+                <button onclick="AgregarAlCarrito('Acondicionador',35000)">Agregar al Carrito</button>
             </div>
         </div>
     </section>
     <section id="Carrito">
-        <h2>Carrito de Compras</h2>
-        <ul id="Lista-Compra"></ul>
-        <p>Total a pagar: $ <span id="total">0</span></p>
+
+        
+        <div class="tarjeta-carro">
+            <h2>Carrito de Compras</h2>
+            <p>Productos seleccionados:</p>
+            <ul id="Lista-Compra"></ul>
+            <p>SubTotal: $ <span id="total">0</span></p>
+            <p>IVA: $<span id="IVA">0</span></p>
+            <p>Total a Pagar: $ <span id="Itotal">0</span></p>
+        </div>
     </section>
     <section id="citas">
         <h2>Agenda tu cita</h2>
-        <form>
+        <div class="tarjeta-cita">
+            <form>
             <fieldset>
-                <legend>Datos de la cita</legend>
+                <legend >Datos de la cita</legend>
                 <label for="nombre">Nombre:</label>
-                <input type="text" id="nombre" name="nombre" required>
+                <input placeholder="Nombre Completo" type="text" id="nombre" name="nombre" required>
                 <label for="fecha">Fecha:</label>
                 <input type="date" id="fecha" name="fecha" required>
                 <label for="servicio">Selecciona un servicio:</label>
@@ -46,23 +62,46 @@
                     <option value="color">Peinado</option>
                     <option value="peinado">Coloracion</option>
                 </select>
-                <button type="submit">Reservar Cita</button>
+                <div class="botoncito"><button type="submit">Reservar Cita</button></div>
             </fieldset>
         </form>
+        </div> 
     </section>
-    <section id="Encuesta">
-        <h2>Realizar Encuesta</h2>
-        <div class="encuesta">
-            <form>
-            <label for="nombre">Nombre:</label>
-            <input type="text" id="nombre" name="nombre" required>
-            <label for="email">Email:</label>
-            <input type="email" id="email" name="email" required>
-            <label for="comentarios">Comentarios:</label>
-            <textarea id="comentarios" name="comentarios" required></textarea>
-            <button type="submit">Enviar</button>
-            </form>
+ <section id="encuesta">
+    <h2>Encuesta de Satisfacción</h2>
+    <div class="tarjeta-encuesta">
+        <form>
+            <label style="font-weight: bold;">¿Cómo calificarías el servicio?</label><br/>
+            <div style="margin: 12px 0;">
+                <input type="radio" name="calificacion" value="excelente" id="excelente" />
+                <label for="excelente">Excelente</label>
+                <input type="radio" name="calificacion" value="bueno" id="bueno" style="margin-left:16px;"/>
+                <label for="bueno">Bueno</label>
+                <input type="radio" name="calificacion" value="regular" id="regular" style="margin-left:16px;"/>
+                <label for="regular">Regular</label>
+            </div>
+            <textarea placeholder="Comentarios adicionales"></textarea><br/>
+            <div class="botoncito">
+                <button type="submit">
+                Enviar
+            </button>
+            </div>
+        </form>
         </div>
     </section>
+    <footer>
+        <p>&copy; 2025 Peluqueria. Todos los derechos reservados.</p>
+    </footer>
+    <script src="script.js"></script>
+    <script>
+        document.querySelector('#citas form').addEventListener('submit', function(e) {
+            e.preventDefault();
+            alert('¡Cita agendada correctamente!'); 
+        });
+        document.querySelector('#encuesta form').addEventListener('submit', function(e) {
+            e.preventDefault();
+            alert('¡Gracias por tu opinión!');
+        });
+    </script>
 </body>
 </html>
